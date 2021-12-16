@@ -118,16 +118,25 @@ header {
   font-size: 14px;
   line-height: 1.14;
 }
-.nav-link .nav-item :hover,
+/* .nav-link .nav-item :hover,
 .nav-link .nav-item :focus {
   color: var(--fone-color);
-}
+} */
 .nav-network {
   display: block;
   position: relative;
   padding-top: 32px;
   padding-bottom: 32px;
   align-items: center;
+}
+.nav-net-animation {
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.nav-net-animation:hover,
+.nav-net-animation:focus {
+  color: var(--fone-color);
 }
 .nav-network::after {
   position: absolute;
@@ -161,10 +170,18 @@ header {
   font-style: normal;
   font-size: 14px;
   line-height: 1.14;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-kontacts-svg {
   margin-right: 10px;
   fill: #757575;
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* .header-kontacts-svg:hover,
@@ -203,8 +220,8 @@ header {
   background-repeat: no-repeat;
   background-position: center;
 }
-.primery-section {
-}
+/* .primery-section {
+} */
 .button-order-servise {
   display: block;
   margin-left: auto;
@@ -402,10 +419,14 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+
   background-color: #ffffff;
   border-radius: 50%;
-
   fill: #afb1b8;
+
+  transition-property: fill, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* Постояные клиенты */
 .client-list {
@@ -427,6 +448,10 @@ header {
   box-sizing: border-box;
   border-radius: 4px;
   fill: #afb1b8;
+
+  transition-property: fill, border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .client-network:focus,
 .client-network:hover {
@@ -508,6 +533,10 @@ header {
   border-radius: 50%;
   fill: #ffffff;
   background: rgba(255, 255, 255, 0.1);
+
+  transition-property: fill, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .join-social-network:focus,
 .join-social-network:hover {
@@ -542,6 +571,10 @@ header {
   font-style: normal;
   font-size: 16px;
   line-height: 1.62;
+
+  transition-property: color, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .projekt-button-item:hover,
 .projekt-button-item:focus {
@@ -563,6 +596,10 @@ header {
   flex-basis: calc((100% - 90px) / 3);
   margin-left: 30px;
   margin-top: 30px;
+
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .projekt-box-item:hover,
 .projekt-box-item:focus {
