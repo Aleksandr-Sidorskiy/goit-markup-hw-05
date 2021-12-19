@@ -21,6 +21,13 @@ body {
   font-family: "Roboto";
   background-color: ffffff;
 }
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 h1,
 h2,
 h3,
@@ -38,13 +45,13 @@ li {
   vertical-align: baseline;
   background: transparent;
 }
-button {
+/* button {
   padding: 0;
   border: none;
   font: inherit;
   color: inherit;
   background-color: transparent;
-}
+} */
 ul {
   list-style: none;
 }
@@ -118,10 +125,7 @@ header {
   font-size: 14px;
   line-height: 1.14;
 }
-/* .nav-link .nav-item :hover,
-.nav-link .nav-item :focus {
-  color: var(--fone-color);
-} */
+
 .nav-network {
   display: block;
   position: relative;
@@ -129,6 +133,7 @@ header {
   padding-bottom: 32px;
   align-items: center;
 }
+
 .nav-net-animation {
   transition-property: color;
   transition-duration: 250ms;
@@ -148,6 +153,7 @@ header {
   width: 100%;
   height: 4px;
   background-color: var(--fone-color);
+  bottom: -1px;
 }
 /* контакты */
 .auth-nav {
@@ -164,6 +170,7 @@ header {
   align-items: center;
 }
 .header-kontacts {
+  display: flex;
   align-items: center;
   color: var(--text-primery);
   font-weight: 500;
@@ -183,11 +190,6 @@ header {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-/* .header-kontacts-svg:hover,
-.header-kontacts-svg:focus {
-  fill: var(--fone-color);
-} */
 
 .header-kontacts:hover .header-kontacts-svg,
 .header-kontacts:focus .header-kontacts-svg {
@@ -246,23 +248,7 @@ header {
   display: flex;
   justify-content: center;
 }
-/* .list-link-svg {
-  display: flex;
-} */
-/* .list-link-svg .list-item-svg:not(:last-child) {
-  margin-right: 30px;
-} */
-/* .list-item-svg {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 270px;
-  height: 120px;
-  margin-bottom: 30px;
 
-  background-color: #f5f4fa;
-  border-radius: 4px;
-} */
 .peculiarities-svg {
   display: flex;
   justify-content: center;
@@ -273,33 +259,6 @@ header {
   background-color: #f5f4fa;
   border-radius: 4px;
 }
-/* .social-link {
-  display: flex;
-  justify-content: center;
-  margin-top: 16px;
-}
-.social-item {
-  background-color: red;
-}
-.social-network:focus,
-.social-network:hover {
-  background-color: var(--fone-color);
-  fill: #ffffff;
-}
-.social-item:not(:last-child) {
-  margin-right: 10px;
-}
-.social-network {
-  width: 44px;
-  height: 44px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #ffffff;
-  border-radius: 50%;
-
-  fill: #afb1b8;
-} */
 
 .list-link .list-item:not(:last-child) {
   margin-right: 30px;
@@ -343,6 +302,27 @@ header {
 .second-item:not(:last-child) {
   justify-content: center;
   margin-right: 30px;
+}
+.second-item {
+  position: relative;
+  overflow: hidden;
+}
+.second-item > .second-text {
+  position: absolute;
+  bottom: 0px;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  margin: 0;
+  width: 100%;
+
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: rgba(47, 48, 58, 0.8);
 }
 /* наша команда */
 .comand {
@@ -601,15 +581,69 @@ header {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+.prjekt-box-deskription {
+  position: relative;
+  overflow: hidden;
+}
+
+.tehnokryak,
+.poster,
+.restaurant,
+.prime,
+.boxes,
+.komp,
+.limited-edition,
+.lab,
+.business {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  margin: 0;
+  padding-left: 27px;
+  width: 100%;
+  height: 101%;
+  transform: translateY(100%);
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+  background-color: rgba(33, 150, 243, 0.9);
+}
+.projekt-box-item .prjekt-box-deskription:hover .tehnokryak,
+.projekt-box-item .prjekt-box-deskription:hover .poster,
+.projekt-box-item .prjekt-box-deskription:hover .restaurant,
+.projekt-box-item .prjekt-box-deskription:hover .prime,
+.projekt-box-item .prjekt-box-deskription:hover .boxes,
+.projekt-box-item .prjekt-box-deskription:hover .komp,
+.projekt-box-item .prjekt-box-deskription:hover .limited-edition,
+.projekt-box-item .prjekt-box-deskription:hover .lab,
+.projekt-box-item .prjekt-box-deskription:hover .business {
+  transform: translateY(0%);
+}
 .projekt-box-item:hover,
 .projekt-box-item:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
-.projekt-box-list .projekt-box-img {
+/* .projekt-box-list .projekt-box-img {
   display: block;
-}
+} */
 .prjekt-box-text {
+  color: var(--text-primery);
+  font-weight: normal;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1.87;
+
   background: #ffffff;
   border: 1px solid #eeeeee;
   box-sizing: border-box;
@@ -623,13 +657,4 @@ header {
   font-style: normal;
   font-size: 18px;
   line-height: 2;
-}
-.projekt-box-list p {
-  /* text-align: center; */
-
-  color: var(--text-primery);
-  font-weight: normal;
-  font-style: normal;
-  font-size: 16px;
-  line-height: 1.87;
 }
